@@ -1,0 +1,22 @@
+<!-- <p>heroes works!</p> -->
+<!-- <h3>{{hero.name}}</h3><br>
+<h4>{{hero.id}}</h4><br>
+<span>hi</span>
+<br>
+<h2>{{hero.name}} Details</h2>
+<h2>{{hero.name | uppercase}} Details</h2>
+<div><span>id: </span> {{hero.id}}</div>
+<div><span>name: </span>{{hero.name}}</div> -->
+
+<br><br>
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes" (click)="onSelectHero(hero)">
+        <span class="badges">{{hero.id}}</span>{{hero.name}}
+
+    </li>
+</ul>
+
+<!-- two way data binding -->
+<app-hero-detail [hero]="selectdHero"></app-hero-detail>
